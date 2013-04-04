@@ -290,7 +290,7 @@ function cleanup_host {
       sudo cp $BASE/old/devstacklog.txt $WORKSPACE/logs/old/
       sudo cp $BASE/old/devstack/localrc $WORKSPACE/logs/old/localrc.txt
       sudo cp $BASE/logs/* $WORKSPACE/logs/
-      sudo cp $BASE/new/grenade/localrc $WORKSPACE/logs/grenade/localrc.txt
+      sudo cp $BASE/grenade/localrc $WORKSPACE/logs/grenade/localrc.txt
       NEWLOGTARGET=$WORKSPACE/logs/new
     else
       NEWLOGTARGET=$WORKSPACE/logs

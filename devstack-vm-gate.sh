@@ -161,7 +161,7 @@ if [ "$DEVSTACK_GATE_GRENADE" -eq "1" ]; then
     cd $BASE/old/devstack
     setup_localrc "old" "$GRENADE_OLD_BRANCH"
 
-    cat <<EOF >$BASE/new/grenade/localrc
+    cat <<EOF >$BASE/grenade/localrc
 BASE_RELEASE=old
 BASE_RELEASE_DIR=$BASE/\$BASE_RELEASE
 BASE_DEVSTACK_DIR=\$BASE_RELEASE_DIR/devstack
@@ -179,7 +179,7 @@ setup_localrc "new" "$ZUUL_BRANCH"
 sudo chown -R stack:stack $BASE
 
 if [ "$DEVSTACK_GATE_GRENADE" -eq "1" ]; then
-    cd $BASE/new/grenade
+    cd $BASE/grenade
     sudo -H -u stack ./grenade.sh
 else
     echo "Running devstack"
